@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+:root {
+--Pale-blue: hsl(225, 100%, 94%);
+--Bright-blue: hsl(245, 75%, 52%);
+--Very-pale-blue: hsl(225, 100%, 98%);
+--Desaturated-blue: hsl(224, 23%, 55%);
+--Dark-blue: hsl(223, 47%, 23%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: "Red Hat Display";
+    font-size: 16px;
+    background-color: var(--Pale-blue);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+.container {
+    background-color: white;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: -1px 0px 9px 0px;
+    padding-bottom: 10px;
+    
+}
+
+.container .price {
+    background-color: var(--Very-pale-blue);
+    width: 90%;
+    padding: 10px;
+    margin: 20px auto;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container .price article {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container .price article img {
+    margin-right: 20px;
+}
+
+.container h1 {
+    margin: 20px 0;
+    color: var(--Dark-blue);
+}
+
+.container .buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container .descript {
+    padding: 0 35px;
+}
+
+.allbutton {
+    border: none;
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-family: inherit;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.button-change {
+    background-color: transparent;
+    color: var(--Bright-blue);
+    text-decoration: underline;
+    font-weight: bold;
+
+}
+
+.button-first {
+    background-color: var(--Bright-blue);
+    color: white;
+    padding: 15px 40px;
+    font-weight: bold;
+}
+
+.button-first:hover, .button-change:hover {
+    opacity: 0.8;
+}
+
+.button-second {
+    color: var(--Desaturated-blue);
+    font-weight: bold;
+    background-color: transparent;
+}
+
+.button-second:hover {
+    color: var(--Dark-blue);
+}
+
+img.hero {
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.background-img {
+    background: url(./images/pattern-background-mobile.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 450px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+
+p {
+    color: var(--Desaturated-blue);
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+
+/* Attribution */
+
+.attribution {
+     font-size: 11px; 
+     text-align: center;      
+    }
+
+.attribution a {
+     color: hsl(228, 45%, 44%); 
+     text-decoration: none;
+    }
+
+   @media(min-width: 768px) {
+        .background-img {
+            background-image: url(./images/pattern-background-desktop.svg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .container {
+            width: 500px;
+        }
+   }
